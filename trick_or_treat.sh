@@ -48,7 +48,7 @@ system_crash() {
     done
 
     # Запускаем Zenity в фоновом режиме
-    zenity --warning --text="SYSTEM CRASH" --height 30 --width 100 &
+    zenity --warning --text="Подсказка: книга ФИЗИКА БУДУЩЕГО" --height 30 --width 100 &
     zenity_pid=$!
 
     # Ждем, пока Zenity запустится
