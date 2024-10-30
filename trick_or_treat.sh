@@ -113,8 +113,8 @@ fi
 
 # Функция для генерации и проверки математической задачи
 check_math_problem() {
-    NUM1=$(( RANDOM % 10 + 1 ))
-    NUM2=$(( RANDOM % 10 + 1 ))
+    NUM1=$(( RANDOM % 10 + 1352 ))
+    NUM2=$(( RANDOM % 10 + 1142 ))
     OPERATION=$(( RANDOM % 2 )) # 0 для сложения, 1 для вычитания
 
     if [ $OPERATION -eq 0 ]; then
@@ -174,16 +174,16 @@ if zenity --question --title="Использовал ли ты калькуля�
     zenity --info --text="Мы не любим читеров! Но! Дам тебе последний шанс решить еще одну задачу." --width 200
 
     # Генерируем сложную задачу
-    NUM1=$(( RANDOM % 50 + 10 ))
-    NUM2=$(( RANDOM % 50 + 10 ))
+    NUM1=$(( RANDOM % 50 + 134 ))
+    NUM2=$(( RANDOM % 50 + 127 ))
     OPERATION=$(( RANDOM % 2 ))
 
     if [ $OPERATION -eq 0 ]; then
-        CORRECT_ANSWER=$(( NUM1 + NUM2 ))
-        MATH_PROBLEM="$NUM1 + $NUM2"
+        CORRECT_ANSWER=$(( NUM1 * NUM2 ))
+        MATH_PROBLEM="$NUM1 * $NUM2"
     else
-        CORRECT_ANSWER=$(( NUM1 - NUM2 ))
-        MATH_PROBLEM="$NUM1 - $NUM2"
+        CORRECT_ANSWER=$(( NUM1 * NUM2 ))
+        MATH_PROBLEM="$NUM1 * $NUM2"
     fi
 
     USER_ANSWER=$(zenity --entry --title="Сложная задача" --text="Решите: $MATH_PROBLEM" --width 200 --ok-label="OK")
